@@ -8,3 +8,12 @@ $bgPrimaryColor: black;
 //* font-Sizes
 
 
+//* mixins
+@mixin breakpoint($point) {
+    @if $point == md {
+        //breakpoint at 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
