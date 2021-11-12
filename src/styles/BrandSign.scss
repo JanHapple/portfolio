@@ -1,0 +1,41 @@
+@import "reset.scss";
+@import "variables.scss";
+@import "fonts.scss";
+
+.signature-box {
+    width: 16rem;    
+    .brand-box {
+        width: 17rem;
+        padding: 0 0 15px 10px;
+        .firstBrandLine {
+            color: $primary;
+            line-height: 3.5rem;
+            .bracket {
+                color: $textPrimary;
+            }
+        }
+        .secondBrandLine {
+            color: $primary;
+            margin-left: 0.8rem;
+            line-height: 3.5rem;
+            .bracket {
+                color: $textPrimary;
+            }
+        }            
+    }
+    .subBrandingFlex {
+        display: flex;
+        justify-content: end;
+        margin-top: -6px;
+        width: 100%;
+        height: 30px;
+        .subBranding {
+            color: $textPrimary;
+            font-size: 1.5rem;
+            margin-right: 1.2rem;
+            .webdev {
+                color: $primary;
+            }
+        }
+    }
+}

@@ -4,8 +4,8 @@
 
 .container {
     display: grid;
-    grid-template-columns: 90vw;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(90vw);
     grid-template-areas:
     "header"
     "about"
@@ -15,10 +15,4 @@
     "footer";
     justify-content: center;
 }
-
-.container {
-    background: black;
-    height: 100vh;
-}
-
 
