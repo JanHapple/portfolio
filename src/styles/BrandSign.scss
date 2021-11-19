@@ -9,24 +9,26 @@
         padding: 0 0 15px 10px;
         .firstBrandLine {
             color: $primary;
-            line-height: 3.5rem;
+            font-weight: 500;
             .bracket {
                 color: $textPrimary;
+                font-size: 4.3rem;
             }
         }
         .secondBrandLine {
             color: $primary;
-            margin-left: 0.8rem;
-            line-height: 3.5rem;
+            font-weight: 500;
+            margin: -2.4rem 0 0 1.1rem;
             .bracket {
                 color: $textPrimary;
+                font-size: 4.3rem;
             }
         }            
     }
     .subBrandingFlex {
         display: flex;
         justify-content: flex-end;
-        margin-top: -6px;
+        margin-top: -1.9rem;
         width: 100%;
         height: 30px;
         .subBranding {
@@ -39,3 +41,31 @@
         }
     }
 }
+
+// .typewriter-text {
+//     overflow: hidden;
+//     position: relative;
+//     // width: 18em;
+//     height: 120px;
+//     border-right: 2px solid rgba(255, 255, 255, 0.75);
+//     animation: typewriter 3s steps(50) 1s normal both,
+//                 blinkTextCursor 400ms steps(50) infinite normal;
+// }
+
+// @keyframes typewriter {
+//     from {
+//         width: 0; 
+//     }
+//     to {
+//         width: 18em;
+//     }
+// }
+
+// @keyframes blinkTextCursor {
+//     from {
+//         border-right-color: rgba(255, 255, 255, 0.75);
+//     }
+//     to {
+//         border-right-color: transparent;
+//     }
+// }

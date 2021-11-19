@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../styles/_variables.scss";
 import "../styles/_reset.scss";
-// import "../styles/Navbar.scss";
-import classes from "../styles/Navbar.scss";
+import "../styles/Navbar.scss";
 import { CgMenuGridO } from "react-icons/cg";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -12,6 +11,24 @@ const Navbar = () => {
         width: undefined,
         height: undefined,
     });
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        };
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, [])
+
+    useEffect(() => {
+        if (size.width > 768 && menuOpen) {
+            setMenuOpen(false)
+        }
+    }, [size.width, menuOpen]);
 
     const menuToggleHandler = () => {
         setMenuOpen((p) => !p);
