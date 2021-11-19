@@ -1,0 +1,9 @@
+@import "reset.scss";
+@import "variables.scss";
+@import "fonts.scss";
+
+.divider {
+    width: 10vw;
+    height: 20px;
+    background-color: $secondary;
+}
