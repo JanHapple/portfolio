@@ -1,10 +1,9 @@
-@import "reset.scss";
 @import "variables.scss";
-@import "fonts.scss";
 
 .signature-box {
     width: 16rem;    
     margin-bottom: 6rem;
+    z-index: 10;
     .brand-box {
         width: 17rem;
         padding: 0 0 15px 10px;

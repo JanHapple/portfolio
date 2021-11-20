@@ -5,10 +5,10 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 60vh repeat(5, auto);
+    grid-template-rows: 120px 60vh 50vh repeat(4, auto);
     grid-template-areas:
+    "nav"
     "header"
-    "brand"
     "about"
     "skills"
     "work"
