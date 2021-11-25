@@ -4,7 +4,10 @@
     grid-area: nav;
     background: $secondary;
     height: 120px;
+    width: 100%; 
     padding: 0 1.5rem;
+    position: fixed; //TODO: fixing Navbar
+    z-index: 100;
     @include breakpoint(md) {
         padding: 0 3rem;
     }
@@ -121,6 +124,7 @@
             cursor: pointer;
             display: flex;
             align-items: center;
+            // right: 2.1rem;
             font-size: 2rem;
             transition: 0.3s ease all;
             position: relative;

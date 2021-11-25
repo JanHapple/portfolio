@@ -2,6 +2,7 @@
 
 .brand-container {
     grid-area: header;
+    margin-top: 120px;
     position: relative;
     background: $bgSecondaryColor;
     display: flex;
@@ -24,7 +25,7 @@
     }
     .first-rectangle {
         position: absolute;
-        top: 32vh;
+        top: 31.9vh;
         width: 0;
         height: 0;
         border-left: 50vw solid transparent;
