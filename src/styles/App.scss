@@ -15,12 +15,13 @@
     "contact"
     "footer";
     justify-content: center;
+    background: $bgSecondaryColor;
 }
 
-.container {
-    background: $textPrimary;
-    width: 100vw;
-    height: 100vh;
+
+#root{
+    scrollbar-width: none;
+    overflow-y: scroll;
 }
 
 

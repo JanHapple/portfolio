@@ -42,7 +42,7 @@ const Navbar = () => {
                 <nav className={`headerContent ${menuOpen ? `isMenu` : ""}`}>
                     <ul className="navList">
                         <li>
-                            <a href="/">About</a>
+                            <a href="/">My Story</a>
                         </li>
                         <li>
                             <a href="/">Skills</a>
