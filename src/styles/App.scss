@@ -5,7 +5,7 @@
 .container {
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 120px 60vh 50vh repeat(4, auto);
+    grid-template-rows: 120px 60vh 80vh repeat(4, auto);
     grid-template-areas:
     "nav"
     "header"
@@ -22,6 +22,8 @@
 #root{
     scrollbar-width: none;
     overflow-y: scroll;
+    background: $bgSecondaryColor;
+    // height: 100vh;
 }
 
 

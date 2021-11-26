@@ -54,7 +54,10 @@ const Navbar = () => {
                     <button>Contact</button>
                 </nav>
                 <div className={"headerContentToggle"}>
-                    {!menuOpen ? (<CgMenuGridO onClick={menuToggleHandler} />) : (<AiOutlineClose onClick={menuToggleHandler}/>)}
+                    {/* {!menuOpen ? (<CgMenuGridO onClick={menuToggleHandler} />) : (<AiOutlineClose onClick={menuToggleHandler}/>)} */}
+                    <div className="bar1"></div>
+                    <div className="bar2"></div>
+                    <div className="bar3"></div>
                 </div>
             </div>
         </header>

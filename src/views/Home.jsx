@@ -1,16 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import "../styles/Home.scss";
 import Aos from "aos";
 import BrandSign from "../components/BrandSign";
-import Divider from "../components/Divider";
 import picture from "../pictures/avatar.png";
-import { Link } from "react-router-dom"
-// import  Avatar  from "avataaars";
+import picture2 from "../pictures/avatar2.png";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
+// TODO: Insert Globe svg or FontAwesome 
 
 Aos.init();
 
 const Home = () => {
+    const [changePic, setChangePic] = useState(picture);
+
+    const changeOnHover = () => {
+        setChangePic(picture2)
+    }
+
+    const changeOnLeave = () => {
+        setChangePic(picture)
+    }
+
     return(
     <main>
         <section className="brand-container">
@@ -27,8 +39,8 @@ const Home = () => {
             {/* <div className="rectangle">Rectagle</div> */}
             {/* <h2 className="welcome">&#10092;Hello World ! &#47;&#10093;</h2> */}
                 <div className="link-container">
-                    <div className="avatar">
-                        <img className="avatar-pic" src={picture} />
+                    <div className="avatar" onMouseOver={changeOnHover} onMouseLeave={changeOnLeave}>
+                        <img className="avatar-pic" src={changePic} />
                     </div>
                     <Link to="/story">
                     <div className="txt-box">
@@ -37,9 +49,13 @@ const Home = () => {
                         <button>My Story</button>
                     </div>
                     </Link>
-                    <div className="trapez-container">
-                    <div className="trapez"></div>
+                    <div className="shape-container">
+                        <div className="shape">Test</div>
                     </div>
+                    
+                    {/* <div className="trapez-container">
+                        <div className="trapez"></div>
+                    </div> */}
                 </div>
                 
         </section>

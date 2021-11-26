@@ -12,8 +12,6 @@
     height: 60vh;
     justify-content: center;
     align-items: center;
-    // border: 1px solid $bgSecondaryColor;
-    // clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 50% 100%, 0 50%);
     .brand {
         z-index: 10;
     }
@@ -50,36 +48,23 @@
 //* Section About ===========================================
 .about {
     grid-area: about;
-    // display: inline-block;
-    // height: 50vh;
-    // border: 4x solid red;
-    width: fit-content;
-    height: 120vh;
-    // background: $bgSecondaryColor;
-    // display: flex;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
     // background: rgb(250,250,250);
     // background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(57,62,70,1) 90%);
-    .welcome {
-        font-family: 'Dosis', Arial, Helvetica, sans-serif;
-        // text-align: center;
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-        color: $primary;
-        // padding-top: 50px;
-    }
+    
     .link-container {
-        padding-top: 20px;
         position: relative;
-        border: 2px solid yellow;
-        // height: 50vh;
-        width: 100vw;
-        // height: 80vh;
-        // overflow: hidden;
+        border: 2px solid $secondary;
+        border-radius: 15px;
+        width: 95vw;
+        height: 50vh;
+        z-index: 2;
         .avatar {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            // margin-left: 10vw;
             display: flex;
             border-radius: 50%;
             justify-content: center;
@@ -98,14 +83,12 @@
         .txt-box {
             position: absolute;
             top: 18rem;
-            right: .5rem;
-            width: 50vw;
-            // height: 100%;
+            right: 1rem;
+            width: 45vw;
             background-color: rgba(255, 255, 255, 1);
             padding: 1.2rem;
-            // transform: translate(80%, 100%);
             border-radius: 15px;
-            border: 2px solid $primary;
+            border: 2px solid $secondary;
             background: $bgPrimaryColor;
             z-index: 5;
             color: white;
@@ -113,6 +96,12 @@
             &:hover button {
                 background: $primary;
                 color: black;
+            }
+            .welcome {
+                font-weight: 500;
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+                color: $primary;
             }
             .brackets {
                 color: white;
@@ -125,32 +114,31 @@
                 outline: none;
                 padding: 0.75rem 1.25rem;
                 border-radius: 10px;
-                // font-size: 1rem;
                 font-weight: 600;
                 font-family: inherit;
                 background: rgba($bgPrimaryColor, 0.5);
                 color: $textPrimary;
                 border: 1px solid $primary;
-                transition: 0.3s ease all;
             }
         }
-        .trapez-container {
-            // position: relative;
-            width: 100vw;
-            // height: 100%;
-            background-color: green;
+        .shape-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background: transparent;
             overflow: hidden;
-            .trapez {
-                // position: absolute;
-                top: 200px;
-                right: 300px;
-                width: 200px;
-                height: 400px;
-               // transform: rotate(45deg);
+            .shape {
+                width: 100%;
+                height: 40%;
                 background: $primary;
-                z-index: 10;
+                position: absolute;
+                top: 8rem;
+                right: 12rem;
+                transform: rotate(-40deg);
             }
         }
+        
     }
     
 }
