@@ -6,6 +6,7 @@
     grid-area: header;
     margin-top: 120px;
     position: relative;
+    width: 100%;
     background: $bgSecondaryColor;
     display: flex;
     position: relative;
@@ -51,16 +52,34 @@
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    height: 80vh;
     // background: rgb(250,250,250);
     // background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(57,62,70,1) 90%);
     
     .link-container {
         position: relative;
-        border: 2px solid $secondary;
+        border: 4px solid $secondary;
         border-radius: 15px;
         width: 95vw;
         height: 50vh;
         z-index: 2;
+        background-color: $bgPrimaryColor;
+        transition: 0.5s;
+        &:hover .txt-box {
+            transform: translateY(-20px);
+        }
+        &:hover .txt-box button {
+            background: $primary;
+            color: black;
+        }
+        &:hover .shape-container .globe {
+            opacity: 1;
+            transform: translate(15%, 30px);
+            
+        }
+        &:hover .shape-container .shape {
+            background: $secondary;
+        }
         .avatar {
             left: 50%;
             top: 50%;
@@ -82,13 +101,12 @@
         }
         .txt-box {
             position: absolute;
-            top: 18rem;
+            top: 10rem;
             right: 1rem;
-            width: 45vw;
-            background-color: rgba(255, 255, 255, 1);
+            width: 35vw;
             padding: 1.2rem;
             border-radius: 15px;
-            border: 2px solid $secondary;
+            border: 4px solid $secondary;
             background: $bgPrimaryColor;
             z-index: 5;
             color: white;
@@ -127,15 +145,29 @@
             height: 100%;
             top: 0;
             background: transparent;
+            // transition: 0.5s;
             overflow: hidden;
             .shape {
                 width: 100%;
                 height: 40%;
+                border: solid 4px $primary;
                 background: $primary;
                 position: absolute;
                 top: 8rem;
                 right: 12rem;
                 transform: rotate(-40deg);
+                transition: 0.8s ease-in-out;
+            }
+            .globe {
+                // position: absolute;
+                transition: .8s ease-in-out;
+                color: $secondary;
+                width: 20%;
+                height: 80%;
+                opacity: 0;
+                transform: translate(15%, -50px);
+                
+                // border: red solid 2px;
             }
         }
         

@@ -137,10 +137,17 @@
                 margin: 5px 0;
                 transition: 0.4s;
             }
-
-            // &:hover {
-            //     color: blue;
-            // }
+            .hamburgerChange .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                transform: rotate(-45deg) translate(-9px, 6px);
+            }
+            .hamburgerChange .bar2 {
+                opacity: 0;
+            }
+            .hamburgerChange .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-8px, -8px);
+            }
 
             @include breakpoint(md) {
                 display: none;

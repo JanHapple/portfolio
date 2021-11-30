@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import "../styles/_variables.scss";
 import "../styles/_reset.scss";
 import "../styles/Navbar.scss";
-import { CgMenuGridO } from "react-icons/cg";
-import { AiOutlineClose } from "react-icons/ai";
+// import { CgMenuGridO } from "react-icons/cg";
+// import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +11,7 @@ const Navbar = () => {
         width: undefined,
         height: undefined,
     });
+    // const [changeBurgerMenu, setchangeBurgerMenu] = useState("")
 
     useEffect(() => {
         const handleResize = () => {
@@ -32,8 +33,11 @@ const Navbar = () => {
 
     const menuToggleHandler = () => {
         setMenuOpen((p) => !p);
-    };
+        let menuburger = document.querySelector(".headerContentToggle");
+        menuburger.classList.toggle("hamburgerChange");
 
+    };
+    
     return(
         <header className="header">
             <div className="headerContent">
@@ -53,7 +57,7 @@ const Navbar = () => {
                     </ul>
                     <button>Contact</button>
                 </nav>
-                <div className={"headerContentToggle"}>
+                <div className={"headerContentToggle"} onClick={menuToggleHandler}>
                     {/* {!menuOpen ? (<CgMenuGridO onClick={menuToggleHandler} />) : (<AiOutlineClose onClick={menuToggleHandler}/>)} */}
                     <div className="bar1"></div>
                     <div className="bar2"></div>
