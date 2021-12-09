@@ -23,11 +23,41 @@
         position: relative;
         z-index: 100;
         .headerContentLogo {
-            font-size: 2rem;
+            // font-size: 3rem;
+            // letter-spacing: 5px;
             font-weight: 400;
             text-decoration: none;
-            color: $textPrimary;
+            
+            // color: $textPrimary;
+            // visibility: hidden;
+            &:hover .brand {
+                visibility: visible;
+                opacity: 1;
+                // font-size: 3rem;
+                letter-spacing: normal;
+                // cursor: pointer;
+                // transform: translateX(30px);
+            }
+            .bracket {
+                color: $textSecondary;
+                font-size: 3rem;
+                cursor: pointer;
+                // margin-right: 5px;
+                
+            }
+            .brand {
+                color: $textPrimary;
+                font-size: 3rem;
+                letter-spacing: -20px;
+                opacity: 0;
+                // visibility: hidden;
+                transition: .8s ease-in-out;
+                cursor: pointer;
+                // transform: translateX(-30px);
+            }
         }
+        
+
         .headerContent {
             top: 0;
             right: 100%;
@@ -138,15 +168,15 @@
                 transition: 0.4s;
             }
             .hamburgerChange .bar1 {
-                -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-                transform: rotate(-45deg) translate(-9px, 6px);
+                // -webkit-transform: rotate(-45deg) translate(-5px, 1px);
+                transform: rotate(-45deg) translate(-5px, 2px);
             }
             .hamburgerChange .bar2 {
                 opacity: 0;
             }
             .hamburgerChange .bar3 {
-                -webkit-transform: rotate(45deg) translate(-8px, -8px);
-                transform: rotate(45deg) translate(-8px, -8px);
+                // -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-8px, -6px);
             }
 
             @include breakpoint(md) {

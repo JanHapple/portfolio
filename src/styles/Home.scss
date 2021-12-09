@@ -47,7 +47,7 @@
 }
 
 //* Section About ===========================================
-.about {
+.about, .skills {
     grid-area: about;
     display: flex;
     justify-content: center;
@@ -69,8 +69,9 @@
             transform: translateY(-20px);
         }
         &:hover .txt-box button {
-            background: $primary;
+            background: $complementer;
             color: black;
+            border: none;
         }
         &:hover .shape-container .globe {
             opacity: 1;
@@ -80,6 +81,56 @@
         &:hover .shape-container .shape {
             background: $secondary;
         }
+        &:hover .skills-cover .html {
+            position: absolute;
+            // top: 20%;
+            // left: 8%;
+            transform: translate(-220%, -170%);
+        }
+        &:hover .skills-cover .css {
+            position: absolute;
+            // top: 20%;
+            // right: 8%;
+            transform: translate(120%, -170%);
+        }
+        &:hover .skills-cover .javascript {
+            position: absolute;
+            // top: 5%;
+            // left: 40%;
+            transform: translate(-48%, -230%);
+        }
+        &:hover .skills-cover .react {
+            position: absolute;
+            // bottom: 5%;
+            // left: 42%;
+            transform: translate(-40%, 135%);
+        }
+        &:hover .skills-cover .node {
+            position: absolute;
+        //     top: 45%;
+        //    left: 5%;
+        transform: translate(-250%, -30%);
+        }
+        &:hover .skills-cover .mongodb {
+            position: absolute;
+            // top: 45%;
+            // right: 5%;
+            transform: translate(135%, -30%);
+        }
+        &:hover .skills-cover .sass {
+            position: absolute;
+            width: 16%;
+            // bottom: 15%;
+            // right: 10%;
+            transform: translate(135%, 120%);
+        }
+        &:hover .skills-cover .git {
+            position: absolute;
+            // bottom: 15%;
+            // left: 10%;
+            transform: translate(-200%, 110%);
+        }
+
         .avatar {
             left: 50%;
             top: 50%;
@@ -112,8 +163,9 @@
             color: white;
             transition: 1s ease all;
             &:hover button {
-                background: $primary;
+                background: $complementer;
                 color: black;
+                border: none;
             }
             .welcome {
                 font-weight: 500;
@@ -161,11 +213,11 @@
             .globe {
                 // position: absolute;
                 transition: .8s ease-in-out;
-                color: $secondary;
+                color: $complementer;
                 width: 20%;
-                height: 80%;
+                height: 65%;
                 opacity: 0;
-                transform: translate(15%, -50px);
+                transform: translate(15%, -50%);
                 
                 // border: red solid 2px;
             }
@@ -174,8 +226,140 @@
     
 }
 
+.skills-cover {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    position: relative;
+    background: $bgPrimaryColor;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    box-shadow: 4px 4px $primary;
+    z-index: 4;
+    
+    // .laptop-box {
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);
+    //     color: $complementer;
+    //     font-size: 8rem;
+    //     z-index: 2;
+    // }
+    // .cog-box {
+    //     position: absolute;
+    //     top: 27%;
+    //     left: 7%;
+    //     z-index: 1;
+    //     color: $secondary;
+    //     font-size: 5rem;
+    //     animation: rotate 10s infinite linear; 
+    // }
+    // .branch {
+    //     position: absolute;
+    //     top: 27%;
+    //     right: 7%;
+    //     z-index: 1;
+    //     color: $secondary;
+    //     font-size: 5rem;
+    //     animation: rotate2 10s infinite linear; 
+    // }
+    // .database {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 50%;
+    //     top: 54%;
+    //     transform: translate(-50%, 85%);
+    //     // right: 10%;
+    //     z-index: 1;
+    //     color: $secondary;
+    //     font-size: 4.5rem;
+    // }
+    // .server {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 50%;
+    //     top: 0;
+    //     transform: translate(-50%, -1%);
+    //     // right: 10%;
+    //     z-index: 1;
+    //     color: $secondary;
+    //     font-size: 4.5rem;
+    // }
+    .code {
+        position: absolute;
+        width: 45%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        // display: none;
+    }
+    .picture {
+        position: absolute;
+        width: 18%;
+        z-index: 5;
+        left: 50%;
+        top: 50%;
+        transition: 0.8s;
+        transform: translate(-50%, -50%);
+        // transform: translate(-50%, -50%);
+    }
+    // .html {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    // }
+    // .css {
+    //     position: absolute;
+    //     top: 50%;
+    //     right: 50%;
+    // }
+    // .javascript {
+    //     position: absolute;
+    //     top: 5%;
+    //     left: 40%;
+    // }
+    // .react {
+    //     position: absolute;
+    //     bottom: 5%;
+    //     left: 42%;
+    // }
+    // .node {
+    //     position: absolute;
+    //     top: 45%;
+    //     left: 5%;
+    // }
+    // .mongodb {
+    //     position: absolute;
+    //     top: 45%;
+    //     right: 5%;
+    // }
+    // .sass {
+    //     position: absolute;
+    //     width: 16%;
+    //     bottom: 15%;
+    //     right: 10%;
+    // }
+    // .git {
+    //     position: absolute;
+    //     bottom: 15%;
+    //     left: 10%;
+    // }
+}
 
+@keyframes rotate {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
 
+//TODO: place icons for skills HOME-section and animate
+// @keyframes rotate2 {
+//     0% {transform: rotate(0);}
+//     100% {transform: rotate(-360deg);}
+// }
 
 
 // .triangle-left {
